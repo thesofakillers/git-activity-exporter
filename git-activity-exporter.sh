@@ -39,8 +39,7 @@ esac
 done
 
 if [ -z "$author" ]; then
-  author=$(git config --get user.name)
-  author="$author <$(git config --get user.email)>"
+  author=""
 fi
 
 if [ -z "$commit_message" ]; then
