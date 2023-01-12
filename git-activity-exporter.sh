@@ -78,8 +78,8 @@ else
     # Only the dates and author are copied
     git --git-dir=$source/.git rev-list \
       $branch --author="$author"\
-      | git --git-dir=$source/.git name-rev --stdin \ 
-      | sed -E 's/~[0-9]+//g; s/\^[0-9]+//g'\
+      | git --git-dir="$source"/.git name-rev --stdin \
+      | sed -E "s/~[0-9]+//g; s/\^[0-9]+//g" \
       | grep " <$branch>" \
       | awk -F " " '{print $1}' \
       | while read -r commit_hash ; do
