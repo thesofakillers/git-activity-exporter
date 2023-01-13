@@ -26,6 +26,9 @@ Options:
                                         Defaults to the current branch and its parents
 ```
 
+WARNING: this isn't very well tested 😅. I would suggest making a backup of your
+source repo before using this tool.
+
 ## Why
 
 ### Scenario 1
