@@ -2,10 +2,19 @@
 
 🟩 Export commit activity (and nothing else) from a source repo to a new repo
 
+## Installation
+
+```bash
+git clone git@github.com:thesofakillers/git-activity-exporter.git # clone
+cd git-activity-exporter                                          # change directory
+cmake .                                                           # prepare build
+make install                                                      # install
+```
+
 ## Usage
 
 ```
-Usage: ./git-activity-exporter [options]
+Usage: git-activity-exporter [options]
 
 Options:
 --source=<source>            Required. The path to the source repository
