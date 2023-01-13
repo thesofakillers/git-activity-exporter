@@ -5,7 +5,7 @@
 ## Usage
 
 ```
-Usage: git-activity-copier [options]
+Usage: ./git-activity-exporter.sh [options]
 
 Options:
 --source=<source>            Required. The path to the source repository
