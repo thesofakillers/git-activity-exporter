@@ -80,9 +80,9 @@ else
         --allow-empty-message -m "$commit_message"
     done < <(git --git-dir="$source"/.git rev-list \
       $branch --author="$author" \
-      | git --git-dir="$source"/.git name-rev --stdin \
+      | git --git-dir="$source"/.git name-rev --annotate-stdin \
       | sed -E "s/~[0-9]+//g; s/\^[0-9]+//g" \
-      | grep " <$branch>" \
+      | grep "$branch" \
       | awk -F " " '{print $1}');
   done
 fi
